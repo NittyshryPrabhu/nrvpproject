@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Description • UPI Fraud Detection System</title>
+  <!-- Consolidated Bootstrap CSS (removed duplicates) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    :root{
+      --bg1:#0f172a; /* slate-900 */
+      --bg2:#111827; /* gray-900 */
+      --card:#0b1220e6;
+      --accent:#3b82f6; /* blue-500 */
+    }
+    html,body{height:100%;}
+    body{font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; background: radial-gradient(1200px 600px at 10% -10%, #1f2937 0%, transparent 60%), linear-gradient(160deg, var(--bg1), var(--bg2)); color:#e5e7eb;}
+    .hero{min-height:100svh; display:grid; place-items:center; padding:24px;}
+    .intro-card{max-width:1000px; background:var(--card); border:1px solid rgba(255,255,255,.05); box-shadow: 0 20px 80px rgba(0,0,0,.45);}
+    .avatar{width:160px; height:160px; object-fit:cover; border-radius:9999px; border:4px solid rgba(255,255,255,.12);}    
+    .badge-skill{background:rgba(59,130,246,.12); color:#bfdbfe; border:1px solid rgba(59,130,246,.25);}
+    .social a{--size:44px; width:var(--size); height:var(--size); display:inline-grid; place-items:center; border-radius:9999px; border:1px solid rgba(255,255,255,.14); text-decoration:none;}
+    .social a:hover{border-color:#60a5fa; box-shadow:0 8px 30px rgba(59,130,246,.25);}
+    footer{color:#94a3b8}
+    .divider{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.1), transparent);}    
+    @media (max-width: 991.98px){
+      .avatar{width:120px; height:120px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="mb-4 text-center">Introduction</h2>
+    
+    <table class="table table-bordered table-striped shadow">
+      <tbody>
+        <tr>
+          <td>
+            In recent years, the <b>Unified Payments Interface (UPI)</b> has become one of the most widely used digital 
+            payment systems in India. While it provides seamless, instant, and secure transactions, it has also opened 
+            doors for fraudulent activities such as <b>phishing, unauthorized access, fake transaction requests, 
+            and social engineering attacks</b>. Hence, there is a growing need for an intelligent system that can 
+            detect and prevent such fraud in real-time.
+            <br><br>
+            This project focuses on building a <b>UPI Fraud Detection System</b> that leverages <b>data analysis</b> 
+            and <b>machine learning techniques</b> to identify suspicious activities, reduce risks, and enhance user security.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+   <div class="container">
+
+    <!-- Objectives -->
+    <h2 class="mb-4 text-center">Objectives</h2>
+    <table class="table table-bordered table-striped shadow">
+      <tbody>
+        <tr>
+          <td>
+            <ul class="mb-0">
+              <li>To analyze UPI transaction patterns and detect unusual or fraudulent activities.</li>
+              <li>To apply machine learning algorithms for anomaly detection and classification of fraudulent transactions.</li>
+              <li>To provide real-time alerts to users for suspicious transactions.</li>
+              <li>To build a secure, efficient, and scalable system that can be integrated with UPI-based payment platforms.</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Problem Statement -->
+    <h2 class="mb-4 text-center">Problem Statement</h2>
+    <table class="table table-bordered table-striped shadow">
+      <tbody>
+        <tr>
+          <td>
+            With the increasing adoption of <b>UPI transactions</b>, cybercriminals have been exploiting loopholes to carry out fraudulent activities. 
+            Traditional fraud detection methods are often <b>static</b> and fail to adapt to new fraud patterns. 
+            Thus, there is a need for an <b>intelligent fraud detection system</b> that can <b>continuously learn and adapt</b> 
+            to evolving fraudulent strategies while ensuring <b>minimal false alarms</b>.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+
+
+<div class="container">
+    <h2 class="mb-4 text-center">Methodology</h2>
+    
+    <table class="table table-bordered table-striped table-hover shadow">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Step</th>
+          <th scope="col">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Data Collection</b></td>
+          <td>UPI transaction datasets (synthetic or anonymized).</td>
+        </tr>
+        <tr>
+          <td><b>Data Preprocessing</b></td>
+          <td>Cleaning, normalization, and feature extraction.</td>
+        </tr>
+        <tr>
+          <td><b>Fraud Detection Techniques</b></td>
+          <td>
+            <ul class="mb-0">
+              <li>Rule-based detection (unusual time, amount, frequency).</li>
+              <li>Machine Learning models (Logistic Regression, Decision Trees, Random Forest, XGBoost, Neural Networks).</li>
+              <li>Anomaly detection using clustering and statistical techniques.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><b>System Development</b></td>
+          <td>
+            <ul class="mb-0">
+              <li><b>Backend:</b> Python (Flask/Django) with ML models.</li>
+              <li><b>Frontend:</b> HTML, CSS, JavaScript for user dashboard.</li>
+              <li><b>Database:</b> MySQL / MongoDB for transaction storage.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><b>Alert Mechanism</b></td>
+          <td>Real-time alerts (SMS/Email/Notification) for suspicious transactions.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container">
+
+    <!-- Expected Outcomes -->
+    <h2 class="mb-4 text-center">Expected Outcomes</h2>
+    <table class="table table-bordered table-striped shadow">
+      <tbody>
+        <tr>
+          <td>
+            <ul class="mb-0">
+              <li>A functional fraud detection system that identifies suspicious UPI transactions.</li>
+              <li>Improved security and trust in digital payments.</li>
+              <li>Reduced financial losses due to UPI fraud.</li>
+              <li>A scalable system that can adapt to new fraud techniques.</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Applications -->
+    <h2 class="mb-4 text-center">Applications</h2>
+    <table class="table table-bordered table-striped shadow">
+      <tbody>
+        <tr>
+          <td>
+            <ul class="mb-0">
+              <li>Banking &amp; financial institutions.</li>
+              <li>Payment gateway companies.</li>
+              <li>E-commerce platforms.</li>
+              <li>Personal finance applications.</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Conclusion -->
+    <h2 class="mb-4 text-center">Conclusion</h2>
+    <table class="table table-bordered table-striped shadow">
+      <tbody>
+        <tr>
+          <td>
+            The proposed <b>UPI Fraud Detection System</b> will enhance the security of digital transactions by detecting fraud in real-time. 
+            By combining <b>rule-based</b> and <b>machine learning approaches</b>, the system will be capable of identifying evolving fraud patterns and minimizing risks. 
+            This project aims to contribute to building a <b>safer digital payment ecosystem</b> in India.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+   <div class="container">
+    <h2 class="mb-3">Documents</h2>
+    <hr>
+
+    <table class="table table-bordered table-striped table-hover shadow">
+      <thead class="table-dark">
+        <tr>
+          <th>Update Date</th>
+          <th>Document Name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>21-08-2025</td>
+          <td><h5 class="mb-0">Statement of Problem</h5></td>
+          <td>
+            <a href="Statement_of_Problem_[_2027_][2].pdf" class="btn btn-sm btn-primary" target="_blank">
+              Download
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+  <!-- Footer Section -->
+  <section id="footer">
+    <footer class="bg-dark text-light pt-5 pb-3 mt-5">
+      <div class="container">
+        <div class="row">
+          <!-- About -->
+          <div class="col-md-4">
+            <h5 class="mb-3">About Us</h5>
+            <p>We are a team of passionate developers building modern web applications.</p>
+          </div>
+
+          <!-- Links -->
+          <!-- <div class="col-md-4">
+            <h5 class="mb-3">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-light text-decoration-none d-block mb-1">Home</a></li>
+              <li><a href="index" class="text-light text-decoration-none d-block mb-1">Projects</a></li>
+              <li><a href="#team" class="text-light text-decoration-none d-block mb-1">Team</a></li>
+            </ul>
+          </div> -->
+
+          <!-- Social
+          <div class="col-md-4">
+            <h5 class="mb-3">Follow Us</h5>
+            <a href="#" class="text-light me-3 fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-light me-3 fs-5"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-light fs-5"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div> -->
+
+        <hr class="border-light">
+
+        <!-- Copyright -->
+        <p class="text-center mb-0">© <span id="year">2025</span> NRVP. All rights reserved.</p>
+      </div>
+    </footer>
+  </section>
+
+  <!-- Consolidated JavaScript (removed duplicates) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
